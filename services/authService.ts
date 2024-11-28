@@ -17,7 +17,9 @@ export const loginUser = async (username: string, password: string) => {
 	  }
   
 	  const result = await response.json();
-	  console.log('Access Token:', result.access_token);
+	  console.log('Access Token:', result.access_token,
+		'Roles :' , result.roles
+	  );
 	  return result.access_token;
 	} catch (error) {
 	  console.error('There was a problem with the fetch operation:', error);
