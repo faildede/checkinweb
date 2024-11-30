@@ -1,4 +1,4 @@
-import ProfileForm from '@/components/OwnComponents/ProfileForm';
+import ProfileForm from '@/components/ui/OwnComponents/ProfileForm';
 
 
 export default function Home() {
