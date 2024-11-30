@@ -19,7 +19,7 @@ export const loginUser = async (username: string, password: string) => {
     const result = await response.json();
     sessionStorage.setItem('token', result.access_token);
 		sessionStorage.setItem('role', result.roles[0]);
-
+    console.log(result.user);
     return {
       token: result.access_token,
       roles: result.roles,
