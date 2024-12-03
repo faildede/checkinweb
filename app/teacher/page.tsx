@@ -24,6 +24,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { UserProfile } from '../../utils/interfaces';
 
 const formSchema = z.object({
   NameofPair: z.string().min(2, {
@@ -32,7 +33,7 @@ const formSchema = z.object({
 });
 
 const Teacher = () => {
-  const [profile, setProfile] = useState(null);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [pairId, setPairId] = useState('');
   const router = useRouter();
 
